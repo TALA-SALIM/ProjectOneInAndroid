@@ -21,7 +21,6 @@ class MyDatabase(context: Context) :
         onCreate(db)
     }
 
-    // حفظ السورة
     fun addSurah(
             surahName: String,
             name: String,
@@ -44,7 +43,6 @@ class MyDatabase(context: Context) :
         db.close()
     }
 
-    // جلب جميع السور المحفوظة
     fun databaseToString(): ArrayList<Surah> {
 
         val surahs = ArrayList<Surah>()
@@ -84,7 +82,6 @@ class MyDatabase(context: Context) :
         return surahs
     }
 
-    // البحث عن سورة بالاسم
     fun findSurah(name: String): ArrayList<Surah> {
 
         val surahs = ArrayList<Surah>()
